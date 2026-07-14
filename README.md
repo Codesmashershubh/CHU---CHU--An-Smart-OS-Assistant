@@ -28,14 +28,13 @@
 ## AI Assistant
 
 <p align="center">
+<<<<<<< HEAD
 <img src="" width="900">
+=======
+<img src="docs/images/Screenshot 2026-07-14 180112.png" width="900">
+>>>>>>> 6b3584c (Add project screenshots)
 </p>
 
-## Automation Execution
-
-<p align="center">
-<img src="docs/images/automation.png" width="900">
-</p>
 
 ---
 
