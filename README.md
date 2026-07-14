@@ -1,8 +1,6 @@
 # 🚀 CHU-CHU — AI Smart OS Assistant
 
-<p align="center">
-  <img src="docs/images/logo.png" alt="CHU-CHU Logo" width="180"/>
-</p>
+
 
 <p align="center">
   <b>An AI-powered desktop assistant capable of understanding natural language, automating desktop tasks, interacting with applications, and executing intelligent workflows.</b>
@@ -21,7 +19,7 @@
 
 # 📸 Preview
 
-> Replace these images with your screenshots.
+
 
 
 
@@ -50,16 +48,16 @@ The project combines AI reasoning, desktop automation, browser automation, and a
 
 # ✨ Features
 
-- 🧠 Natural Language Understanding
-- 🤖 AI-powered Task Execution
-- 🖥 Desktop Application Automation
-- 🌐 Browser Automation
-- 📂 Intelligent File Operations
-- 🔌 Plugin-based Skill System
-- ⚡ FastAPI Backend
-- 💬 Modern Electron Desktop UI
-- 🔒 Confirmation Before Sensitive Operations
-- 📈 Easily Extendable Architecture
+-  Natural Language Understanding
+-  AI-powered Task Execution
+-  Desktop Application Automation
+-  Browser Automation
+-  Intelligent File Operations
+-  Plugin-based Skill System
+-  FastAPI Backend
+-  Modern Electron Desktop UI
+-  Confirmation Before Sensitive Operations
+-  Easily Extendable Architecture
 
 ---
 
@@ -259,9 +257,7 @@ Contributions are welcome!
 
 ---
 
-# 📜 License
 
-This project is licensed under the MIT License.
 
 ---
 
@@ -272,4 +268,4 @@ This project is licensed under the MIT License.
 If you found this project helpful, consider giving it a ⭐ on GitHub.
 ## License
 
-MIT — see [LICENSE](LICENSE).
+git push origin main
