@@ -30,7 +30,7 @@
 <img src="" width="900">
 =======
 <img src="docs/images/Screenshot 2026-07-14 180112.png" width="900">
->>>>>>> 6b3584c (Add project screenshots)
+
 </p>
 
 
@@ -267,5 +267,4 @@ Contributions are welcome!
 
 If you found this project helpful, consider giving it a ⭐ on GitHub.
 ## License
-
-git push origin main
+MIT
