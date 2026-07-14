@@ -1,72 +1,276 @@
-# Chu Chu
+# 🚀 CHU-CHU — AI Smart OS Assistant
 
-A free, 8GB-laptop-optimized AI OS assistant. Dark, fast, and built to run
-entirely on no-credit-card free tiers — backend and AI engine on Render,
-desktop shell on your own machine.
-
-<p>
-  <img src="frontend/build/icon.png" width="72" alt="Chu Chu" />
+<p align="center">
+  <img src="docs/images/logo.png" alt="CHU-CHU Logo" width="180"/>
 </p>
 
-## What it is
+<p align="center">
+  <b>An AI-powered desktop assistant capable of understanding natural language, automating desktop tasks, interacting with applications, and executing intelligent workflows.</b>
+</p>
 
-- A desktop app (Electron + React) that sits in your tray with a global
-  shortcut (`Ctrl/Cmd+Shift+Space`), a command palette (`Ctrl/Cmd+K`), chat,
-  notes, and reminders.
-- A backend (FastAPI) that runs on Render's free tier and talks to free
-  hosted AI APIs (Groq, with Gemini/OpenRouter as fallback) instead of
-  running a model in-process — which is also *why* it fits in 512MB of RAM.
-- A small, safety-conscious automation layer: the AI can *ask* to open an
-  app, set a reminder, take a screenshot, etc.; only the desktop app,
-  running locally, ever actually does it, and only after you confirm.
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Windows-blue"/>
+  <img src="https://img.shields.io/badge/Electron-Latest-47848F"/>
+  <img src="https://img.shields.io/badge/FastAPI-009688"/>
+  <img src="https://img.shields.io/badge/Python-3.10-yellow"/>
+  <img src="https://img.shields.io/badge/Node.js-20+-green"/>
+  <img src="https://img.shields.io/badge/License-MIT-success"/>
+</p>
 
-Full reasoning behind every one of those choices — especially where they
-depart from the original tech-stack brief (Ollama, pyautogui, local
-Whisper) and why — is in **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**.
+---
 
-## Quickstart
+# 📸 Preview
+
+> Replace these images with your screenshots.
+
+
+
+## AI Assistant
+
+<p align="center">
+<img src="docs/images/chat.png" width="900">
+</p>
+
+## Automation Execution
+
+<p align="center">
+<img src="docs/images/automation.png" width="900">
+</p>
+
+---
+
+# 📖 Overview
+
+CHU-CHU is an AI-powered desktop operating system assistant designed to simplify human-computer interaction through natural language.
+
+Instead of navigating multiple applications manually, users can simply describe what they want to do. CHU-CHU interprets the request, determines the appropriate action, and executes it securely through its automation engine.
+
+The project combines AI reasoning, desktop automation, browser automation, and a modular plugin architecture into one intelligent desktop application.
+
+---
+
+# ✨ Features
+
+- 🧠 Natural Language Understanding
+- 🤖 AI-powered Task Execution
+- 🖥 Desktop Application Automation
+- 🌐 Browser Automation
+- 📂 Intelligent File Operations
+- 🔌 Plugin-based Skill System
+- ⚡ FastAPI Backend
+- 💬 Modern Electron Desktop UI
+- 🔒 Confirmation Before Sensitive Operations
+- 📈 Easily Extendable Architecture
+
+---
+
+# 🏗 Architecture
 
 ```
-chu-chu/
-├── backend/     FastAPI + AI engine → deploys to Render (free)
-├── frontend/    Electron + React desktop app → runs on your machine
-├── plugins/     Automation skill definitions (see plugins/README.md)
-└── docs/        Architecture, deployment, design, roadmap notes
+                    User
+                      │
+                      ▼
+              Electron Desktop
+                      │
+                      ▼
+               FastAPI Backend
+                      │
+          ┌───────────┴───────────┐
+          ▼                       ▼
+   Intent Recognition      Automation Engine
+          │                       │
+          ▼                       ▼
+     Skill Dispatcher      Browser/Desktop Skills
+          │                       │
+          └──────────────┬────────┘
+                         ▼
+                   Windows Operating System
 ```
 
-1. **Deploy the backend** — [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) walks
-   through it end to end; roughly: click Render's Blueprint deploy, paste in
-   a free Groq API key, done.
-2. **Run the desktop app**:
-   ```bash
-   cd frontend
-   cp .env.example .env   # point it at your Render URL + shared secret
-   npm install
-   npm run electron:dev
-   ```
-3. Talk to it. `Ctrl/Cmd+K` for the command palette, the mic icon for voice.
+---
 
-## Docs
+# 🛠 Tech Stack
 
-| | |
-|---|---|
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Every non-obvious decision, and why — start here |
-| [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Step-by-step Render + local setup |
-| [docs/DESIGN.md](docs/DESIGN.md) | The visual identity and why it looks the way it does |
-| [docs/ROADMAP_NOTES.md](docs/ROADMAP_NOTES.md) | The PRD's 5 phases, mapped to what's actually built |
-| [plugins/README.md](plugins/README.md) | How the automation skill system works, and how to extend it |
-| [backend/README.md](backend/README.md) | Backend-specific dev notes |
-| [frontend/README.md](frontend/README.md) | Frontend-specific dev notes |
+### Frontend
 
-## What's genuinely free here
+- Electron
+- HTML
+- CSS
+- JavaScript
 
-Render (backend hosting), Groq (chat + voice transcription), Gemini and
-OpenRouter (fallback models), Tavily (web search), and the browser's own
-`SpeechSynthesis` (voice output) — every one of those is a real,
-no-credit-card free tier as of this build, cross-checked against each
-provider's current docs rather than assumed from memory. See the cost
-ledger at the bottom of `docs/ARCHITECTURE.md` for specifics and ceilings.
+### Backend
 
+- FastAPI
+- Python
+- Uvicorn
+
+### AI
+
+- Python
+- Intent Recognition
+- Modular Skill System
+
+### Automation
+
+- Desktop Automation
+- Browser Automation
+- Command Execution
+
+---
+
+# 📂 Project Structure
+
+```
+CHU-CHU
+│
+├── backend/
+├── frontend/
+├── plugins/
+│   ├── automation-skills/
+│   └── browser-skills/
+├── docs/
+├── docker-compose.yml
+├── render.yaml
+├── README.md
+└── package.json
+```
+
+---
+
+# 🚀 Getting Started
+
+## Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/CHU-CHU.git
+
+cd CHU-CHU
+```
+
+---
+
+## Install Dependencies
+
+### Backend
+
+```bash
+cd backend
+
+pip install -r requirements.txt
+```
+
+### Frontend
+
+```bash
+cd ../frontend
+
+npm install
+```
+
+---
+
+## Configure Environment Variables
+
+Create a `.env` file inside the `backend` directory and add all required API keys and configuration values.
+
+---
+
+# ▶ Running the Backend
+
+```bash
+cd backend
+
+uvicorn app.main:app --reload
+```
+
+---
+
+# ▶ Running the Desktop Application
+
+Open a new terminal.
+
+```bash
+cd frontend
+
+npm run electron:dev
+```
+
+---
+
+# 📌 Current Capabilities
+
+✅ Launch Applications
+
+✅ Open Websites
+
+✅ Desktop Automation
+
+✅ Browser Automation
+
+✅ Natural Language Commands
+
+✅ Plugin-based Skills
+
+✅ FastAPI API Layer
+
+✅ Electron Desktop Client
+
+---
+
+# 🧩 Plugin System
+
+CHU-CHU uses a modular plugin architecture.
+
+Example:
+
+```
+plugins/
+│
+├── automation-skills/
+├── browser-skills/
+```
+
+New skills can be added without modifying the core application.
+
+---
+
+# 📈 Roadmap
+
+- Voice Commands
+- Offline AI Support
+- Local LLM Integration
+- Multi-Agent Architecture
+- Memory System
+- Calendar Integration
+- Email Automation
+- Smart Workflow Builder
+- Cross-platform Support
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push your branch
+5. Open a Pull Request
+
+---
+
+# 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**Shubham**
+
+If you found this project helpful, consider giving it a ⭐ on GitHub.
 ## License
 
 MIT — see [LICENSE](LICENSE).
